@@ -1,0 +1,43 @@
+@charset "utf-8";
+.box{width: 500px;height: 300px;margin: 20px;border: 1px solid #000;}
+/* 
+선형 그라디언트
+background-image: linear-gradient(방향, 색상1, 색상2);
+background-image: linear-gradient(방향, 색상1 위치1(%), 색상2 위치2(%));
+background-image: linear-gradient(방향, rgba() 위치1%, rgba() 위치2%);
+
+방향
+1) 문자 : to bottom(기본), to top, to left, to right
+2) 각도 : 양수, 음수 deg
+
+원형 그라디언트
+background-image: radial-gradient(모양, 색상1, 색상2)
+
+모양
+1) ellipse(기본)
+2) circle
+*/
+#box1{background-image: linear-gradient(#ff0000, #008000, #0000ff);}
+/* #box1{background-image: linear-gradient(to bottom, #ff0000, #008000, #0000ff);} 기본방향은 생략 가능 */
+#box2{background-image: linear-gradient(to right, #ff0000 20%, #008000 30%, #0000ff 60%);}
+#box3{background-image: linear-gradient(to left, rgba(255, 0, 0, 1) 20%, rgba(0, 128, .2) 30%, rgba(0, 0, 255, .8) 60%);}
+#box4{background-image: repeating-linear-gradient(45deg, #ff0000 0%, #ffff00 10%, #008000 20%);}
+/* https://www.colorzilla.com/gradient-editor/ */
+#box5{
+background: #fcecfc; /* Old browsers */
+background: -moz-linear-gradient(left,  #fcecfc 0%, #6fc0f2 20%, #fba6e1 50%, #fd89d7 75%, #f94040 93%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #fcecfc 0%,#6fc0f2 20%,#fba6e1 50%,#fd89d7 75%,#f94040 93%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #fcecfc 0%,#6fc0f2 20%,#fba6e1 50%,#fd89d7 75%,#f94040 93%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcecfc', endColorstr='#f94040',GradientType=1 ); /* IE6-9 */
+}
+
+#box6{background-image: radial-gradient(red, yellow, blue);}
+/* #box6{background-image: radial-gradient(ellipse, red, yellow, blue);} 기본 타입인 타원형은 생략 가능*/
+#box7{background-image: repeating-radial-gradient(circle, red 0%, yellow 10%, blue 20%);}
+#box8{
+background: #e6f0a3; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #e6f0a3 0%, #fcef3f 30%, #74b520 60%, #47c436 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover,  #e6f0a3 0%,#fcef3f 30%,#74b520 60%,#47c436 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse,  #e6f0a3 0%,#fcef3f 30%,#74b520 60%,#47c436 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f0a3', endColorstr='#47c436',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
